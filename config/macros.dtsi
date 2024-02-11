@@ -1,0 +1,10 @@
+ZMK_MACRO(m_f14_ua,
+  wait-ms = <30>;
+  tap-ms = <40>;
+  bindings = <&kp F14 &to UA>;
+)
+ZMK_MACRO(m_f14_vukeys,
+  wait-ms = <30>;
+  tap-ms = <40>;
+  bindings = <&kp F14 &to VUKEYS>;
+)
