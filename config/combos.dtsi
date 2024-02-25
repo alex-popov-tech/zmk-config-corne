@@ -38,4 +38,3 @@ COMBO(right_ring_home_top_opt, 80, &sk RALT, 9 21, VUKEYS UA)
 
 COMBO(thumbs_vukeys, 50, &m_f14_vukeys, 38 39, UA)
 COMBO(thumbs_ua, 50, &m_f14_ua, 38 39, VUKEYS)
-

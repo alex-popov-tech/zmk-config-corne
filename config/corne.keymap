@@ -9,11 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define VUKEYS 0
-#define UA     1
-#define SYM    2
-#define PREF     3
-
-#define BTCLR &bt BT_CLR
+#define UA 1
+#define SYM 2
+#define PREF 3
 
 / {
   behaviors {
@@ -52,7 +50,7 @@
 // ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
       &kp LBKT    &kp A       &mm_s_rbkt  &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp DOT
 // ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &none       &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp SLASH   &kp COMMA &mm_shtfslash_bslash &none
+      &kp F14     &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp SLASH   &kp COMMA &mm_shtfslash_bslash &kp F14
 // ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
                                           &trans      &trans      &trans         &trans      &trans      &trans
 //                                     ╰───────────┴───────────┴───────────╯  ╰───────────┴───────────┴───────────╯
