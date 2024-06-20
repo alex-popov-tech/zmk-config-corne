@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define VUKEYS 0
 #define UA 1
@@ -8,7 +8,7 @@
 #define PREF 3
 
 / {
-  behaviors {
+    behaviors {
         mm_comma_semi: mm_comma_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_COMMA_SEMI";
@@ -188,8 +188,9 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-  };
-  combos {
+    };
+
+    combos {
         compatible = "zmk,combos";
 
         left_index_home_top_ctrl {
@@ -245,8 +246,9 @@
             key-positions = <40 41>;
             layers = <1>;
         };
-  };
-  macros {
+    };
+
+    macros {
         m_f14_ua: m_f14_ua {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -264,68 +266,49 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
-  };
-  keymap {
-    compatible = "zmk,keymap";
-
-    VUKEYS {
-      label = " VU KEYS";
-      bindings = <
-// ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮  ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-      &kp F13     &kp Q       &kp C       &kp D       &kp M       &kp V          &kp B       &kp W       &kp U       &kp K       &kp SQT     &kp F13
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &kp F11     &kp N       &kp S       &kp T       &kp R       &kp L          &kp Y       &kp A       &kp E       &kp O       &kp I       &kp F12
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &kp F14     &kp X       &kp F       &kp G       &kp H       &kp Z          &kp SLASH   &kp P     &mm_dot_col   &kp J     &mm_comma_semi &kp F14
-// ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
-                                          &kp ESC     &kp SPC     &mo SYM        &kp BSPC    &kp LSHIFT  &kp RET
-//                                     ╰───────────┴───────────┴───────────╯  ╰───────────┴───────────┴───────────╯
-      >;
     };
 
-    UA {
-      label = " UKRAINE";
-      bindings = <
-// ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮  ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-      &trans      &kp Q       &kp W       &kp E       &kp R       &mm_t_quot     &kp Y       &mm_u_grv   &kp I       &kp O       &kp P       &trans
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &kp LBKT    &kp A       &mm_s_rbkt  &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp DOT
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &kp F14     &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp SLASH   &kp COMMA &mm_shtfslash_bslash &kp F14
-// ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
-                                          &trans      &trans      &trans         &trans      &trans      &trans
-//                                     ╰───────────┴───────────┴───────────╯  ╰───────────┴───────────┴───────────╯
-      >;
-    };
+    keymap {
+        compatible = "zmk,keymap";
 
-    SYM {
-      label = " SYMBOLS";
-      bindings = <
-// ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮  ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-      &trans    &mm_pipe_bslh &mm_lbkt  &mm_lpr_hash &mm_lcbr_dollar &trans      &trans    &mm_rcbr_amp &mm_rpr_star &mm_rbkt   &kp GRAVE    &trans
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &trans      &kp N1      &kp N2    &mm_n3_left &mm_n4_right  &kp EQUAL      &kp MINUS &mm_n7_down  &mm_n8_up    &mm_n9_lt  &mm_n0_gt    &trans
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &trans      &trans      &trans      &trans      &kp N5      &kp TAB        &kp TAB     &kp N6      &trans      &trans      &trans      &trans
-// ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
-                                          &mo PREF    &trans      &trans         &mo PREF    &trans      &mo PREF
-//                                     ╰───────────┴───────────┴───────────╯  ╰───────────┴───────────┴───────────╯
-      >;
-    };
+        VUKEYS {
+            label = " VU KEYS";
+            bindings = <
+&kp F13  &kp Q  &kp C  &kp D    &kp M      &kp V      &kp B      &kp W       &kp U        &kp K  &kp SQT         &kp F13
+&kp F11  &kp N  &kp S  &kp T    &kp R      &kp L      &kp Y      &kp A       &kp E        &kp O  &kp I           &kp F12
+&kp F14  &kp X  &kp F  &kp G    &kp H      &kp Z      &kp SLASH  &kp P       &mm_dot_col  &kp J  &mm_comma_semi  &kp F14
+                       &kp ESC  &kp SPACE  &mo SYM    &kp BSPC   &kp LSHIFT  &kp RET
+            >;
+        };
 
-    PREF {
-      label = " PREF";
-      bindings = <
-// ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮  ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-      &bt BT_CLR  &none       &none       &none       &none       &none          &none       &none       &none       &none       &none       &none
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6         &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
-// ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-      &none       &none       &none       &none       &none       &none          &none       &none       &none       &none       &none       &none
-// ╰───────────┴───────────┴───────────┼───────────┼───────────┼───────────┤  ├───────────┼───────────┼───────────┼───────────┴───────────┴───────────╯
-                                          &none       &none       &none          &none       &none       &none
-//                                     ╰───────────┴───────────┴───────────╯  ╰───────────┴───────────┴───────────╯
-      >;
+        UA {
+            label = " UKRAINE";
+            bindings = <
+&trans    &kp Q  &kp W       &kp E   &kp R   &mm_t_quot    &kp Y   &mm_u_grv  &kp I      &kp O      &kp P                 &trans
+&kp LBKT  &kp A  &mm_s_rbkt  &kp D   &kp F   &kp G         &kp H   &kp J      &kp K      &kp L      &kp SEMI              &kp DOT
+&kp F14   &kp Z  &kp X       &kp C   &kp V   &kp B         &kp N   &kp M      &kp SLASH  &kp COMMA  &mm_shtfslash_bslash  &kp F14
+                             &trans  &trans  &trans        &trans  &trans     &trans
+            >;
+        };
+
+        SYM {
+            label = " SYMBOLS";
+            bindings = <
+&trans  &mm_pipe_bslh  &mm_lbkt_lbrace  &mm_lpr_hash  &mm_lcbr_dollar  &trans       &trans     &mm_rcbr_amp  &mm_rpr_star  &mm_rbkt   &kp GRAVE  &trans
+&trans  &kp N1         &kp N2           &mm_n3_left   &mm_n4_right     &kp EQUAL    &kp MINUS  &mm_n7_down   &mm_n8_up     &mm_n9_lt  &mm_n0_gt  &trans
+&trans  &trans         &trans           &trans        &kp N5           &kp TAB      &kp TAB    &kp N6        &trans        &trans     &trans     &trans
+                                        &mo PREF      &trans           &trans       &mo PREF   &trans        &mo PREF
+            >;
+        };
+
+        PREF {
+            label = " PREF";
+            bindings = <
+&bt BT_CLR  &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none
+&kp F1      &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&none       &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none
+                            &none   &none   &none     &none   &none   &none
+            >;
+        };
     };
-  };
 };
