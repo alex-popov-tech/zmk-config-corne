@@ -238,13 +238,15 @@
         vukeys_to_ua {
             bindings = <&m_f14_ua>;
             key-positions = <38 39>;
-            layers = <0 1 2>;
+            layers = <0>;
+            timeout-ms = <80>;
         };
 
         ua_to_vukeys {
             bindings = <&m_f14_vukeys>;
             key-positions = <38 39>;
             layers = <1>;
+            timeout-ms = <80>;
         };
     };
 
