@@ -235,7 +235,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F14 &to 1>;
-            label = "M_F14_UA";
             wait-ms = <30>;
             tap-ms = <40>;
         };
@@ -244,7 +243,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F14 &to 0>;
-            label = "M_F14_VUKEYS";
             wait-ms = <30>;
             tap-ms = <40>;
         };
@@ -254,7 +252,6 @@
         compatible = "zmk,keymap";
 
         VUKEYS {
-            label = " VU KEYS";
             bindings = <
 &kp F13  &kp Q  &kp C  &kp D    &kp M      &kp V      &kp B      &kp W       &kp U        &kp K  &kp SQT         &kp F13
 &kp F11  &kp N  &kp S  &kp T    &kp R      &kp L      &kp Y      &kp A       &kp E        &kp O  &kp I           &kp F12
@@ -264,7 +261,6 @@
         };
 
         UA {
-            label = " UKRAINE";
             bindings = <
 &trans    &kp Q  &kp W       &kp E   &kp R   &mm_t_quot    &kp Y   &mm_u_grv  &kp I      &kp O      &kp P                 &trans
 &kp LBKT  &kp A  &mm_s_rbkt  &kp D   &kp F   &kp G         &kp H   &kp J      &kp K      &kp L      &kp SEMI              &kp DOT
@@ -274,7 +270,6 @@
         };
 
         SYM {
-            label = " SYMBOLS";
             bindings = <
 &trans  &mm_pipe_bslh  &mm_lbkt_lbrace  &mm_lpr_hash  &mm_lcbr_dollar  &trans       &trans     &mm_rcbr_amp  &mm_rpr_star  &mm_rbkt   &kp GRAVE  &trans
 &trans  &kp N1         &kp N2           &mm_n3_left   &mm_n4_right     &kp EQUAL    &kp MINUS  &mm_n7_down   &mm_n8_up     &mm_n9_lt  &mm_n0_gt  &trans
@@ -284,7 +279,6 @@
         };
 
         PREF {
-            label = " PREF";
             bindings = <
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &none   &none   &none     &none   &none   &none   &none    &none    &none
 &kp F1          &kp F2        &kp F3        &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
