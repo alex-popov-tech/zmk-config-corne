@@ -21,17 +21,17 @@ include:
     shield: settings_reset
   - board: nrfmicro_13
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Steel ~orne\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Steel_Corne\"
     artifact-name: steel_corne_left
   - board: nrfmicro_13
     shield: corne_right
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Steel Corne\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Steel_Corne\"
     artifact-name: steel_corne_right
   - board: nrfmicro_13
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"LP Corne\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"LP_Corne\"
     artifact-name: lowprofile_corne_left
   - board: nrfmicro_13
     shield: corne_right
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"LP Corne\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"LP_Corne\"
     artifact-name: lowprofile_corne_right
