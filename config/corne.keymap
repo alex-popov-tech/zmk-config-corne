@@ -228,6 +228,16 @@
             layers = <1>;
             timeout-ms = <80>;
         };
+
+        pwd_l {
+            bindings = <&pwd>;
+            key-positions = <0 5>;
+        };
+
+        zmk_r {
+            bindings = <&pwd>;
+            key-positions = <6 11>;
+        };
     };
 
     macros {
@@ -245,6 +255,13 @@
             bindings = <&kp F14 &to 0>;
             wait-ms = <30>;
             tap-ms = <40>;
+        };
+
+        pwd: pwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A>;
+            label = "PWD";
         };
     };
 
